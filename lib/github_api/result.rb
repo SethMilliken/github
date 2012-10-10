@@ -100,6 +100,14 @@ module Github
     end
     alias :previous_page :prev_page
 
+    def next_page_number
+      page_iterator.next_page
+    end
+
+    def prev_page_number
+      page_iterator.prev_page
+    end
+
     # Retrives the result of the last page. Returns <tt>nil</tt> if there is
     # no last page - either because you are already on the last page,
     # there is only one page or there are no pages at all in the result.
